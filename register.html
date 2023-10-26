@@ -1,0 +1,1172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online shop cart</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/online-shopping.png">
+    <style>
+        @media screen and (max-width:767px) {
+
+            #col1,
+            #col2,
+            #con {
+
+                display: block;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                padding-left: 25px;
+            }
+
+            #next1,
+            #next2 {
+                position: relative;
+                top: -572px;
+                left: -42%
+            }
+
+            .col1{
+                padding-left: 60px;
+            }
+
+            #next2 {
+                position: relative;
+                left: 40%
+            }
+
+            .con{
+                display: block;
+                padding-left: 60px;
+            }
+            #list{
+                width: 100%;
+                
+            }
+            #nextmain1{
+           position: relative;
+           top: -100px;
+           
+            }
+            #nextmain2{
+                position: relative;
+                top: -100px;
+                right: -80%;
+            }
+            .loginpadge{
+                width: 80%;
+                right:10%;
+                height: 40%;
+
+            }
+
+        }
+        
+        
+          
+        
+        @media (min-width:768px) and (max-width:10240px) {
+
+            #col1,
+            #col2,
+            #con {
+                display: flex;
+
+            }
+
+            #next1,
+            #next2 {
+                position: relative;
+                top: -130px;
+
+            }
+
+            #next2 {
+                position: relative;
+                left: 90%
+            }
+            #list{
+                width: 23%;
+            }
+            #nextmain1{
+           position: relative;
+           top: -250px;
+           left: -40px;
+            }
+            #nextmain2{
+                position: relative;
+                top: -250px;
+                right: -1085px;
+            }
+            .loginpadge{
+                width: 30%;
+                right:30%;
+                height: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100vh;overflow-x: hidden;" >
+    
+    <div style="background-color: rgb(236, 239, 245);padding:10px;" class="hiddd" >
+        <div class="container" >
+            <div class="row justify-content-around">
+                <div class="col-sm-10 d-flex"> <span class="textcolor font-monospace me-2">Welcome </span>
+                    <div class="fw-bold" id="vvv"></div>
+
+                </div>
+                <div class="col text-end"> <input type="text" class="shadow-sm rounded-3 me-2" disabled
+                        style="width: 15%;height: max-content;" v-model="">
+                    <button class="btn btn-outline-primary" style="height: max-content;font-size: small;">items in your
+                        card</button>
+                </div>
+
+            </div>
+            <nav class="navbar navbar-expand-lg bgnav  rounded-1 mt-1">
+                <a href="#ahmed" class="navbar-toggler" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <il><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg></il>
+                <il class="pt-4" >
+                    <input type="search" list="datalist" class="form-control" tabindex="40px" placeholder="search">
+                    <img src="img/search.png" style="position: relative;top: -35px;">
+                    <datalist id="datalist">
+                        <option value="Camera"></option>
+                        <option value="Manicure"></option>
+                        <option value="Clothes"></option>
+                        <option value="Foods"></option>
+                        <option value="HEALTH"></option>
+                    </datalist>
+
+                </il>
+
+
+                <il style="width: 20%;">
+                    <select class="form-select" id="">
+                        <option selected value="">All</option>
+                        <option value="">Clothes</option>
+                        <option value="">Foods</option>
+                        <option value="">Sport</option>
+                        <option value="">Books</option>
+                    </select>
+                </il>
+                <il><button class="btn shadow-sm backcolor text-white"> Do</button></il>
+                <div id="ahmed" class="collapse navbar-collapse">
+                    <ul class="navbar-nav justify-content-around rounded-3  align-items-center p-2 text-white">
+
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="#">Offers</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="#">Delivery</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="#">Contact</a></il>
+                        <il style="width: 100%;padding-left: 170px;"><button class="btn bggreen text-white shadow-sm" id="loginn">Login</button></il>
+
+                    </ul>
+                </div>
+
+            </nav>
+   
+        </div>
+       
+      
+       
+
+
+    </div>
+    
+    <div class="container">
+        
+        <div class="row">
+        <div id="con" style="width: 100%;">
+            <div class="cocl d-block " id="list">
+                <div class="col back mt-4 mb-4 rounded-3" style="width: 100%;height: 65px;">
+                    <img src="img/warehouse-cart-package-ribbon-1 (1).png" alt="your card">
+                    <a href="#" class="text-dark  icon-link link-underline-opacity-25
+                          icon-link-hover link-underline-dark pe-4"> items in card</a>
+                    <button class="btn btn-warning text-white font-monospace">$ 155</button>
+                </div>
+                <div class="col-3 back mb-4 rounded-3 "
+                    style="width: 90%;height:max-content;background-color:rgba(168, 168, 168, 0.332);margin-left: 15px;">
+                    <div class="row rounded-top-3 border border-secondary-subtle " style="background-color:rgba(255, 255, 255, 0.332);">
+                        <div id="li1" class="bg border-2 border-bottom">ELECTRONICS [230]</div>
+                        <div id="li2" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li3" class="bg border-2 border-bottom">CLOTHES [840]</div>
+                        <div id="li4" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li5" class="bg border-2 border-bottom">FOOD AND BEVERAGES [700]</div>
+                        <div id="li6" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li7" class="bg border-2 border-bottom">HEALTH & BEAUTY [18]</div>
+                        <div id="li8" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li9" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                        <div id="li10" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+                            <div id="li11" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                            <div id="li12" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                                <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    camera</div>
+                                <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    computer</div>
+                                <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    mopile</div>
+                                <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    sound</div>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-center align-items-center shadow-sm" style="width: 100%;">
+                    <img src="img/products/panasonic.jpg" style="width: min-content;" class="card-img">
+                     <div class="card-body">
+                        <div class="card-title">
+                            Panasonic
+                        </div>
+                       
+                        <div class="row">
+                            <div class="col d-flex">
+                                <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                     stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                </a>
+                            </div>
+                            <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                        </div>
+                     </div>
+                    </div>
+                  
+                
+                
+                    <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                        <img src="img/products/kindle.png" style="width: min-content;" class="card-img">
+                         <div class="card-body">
+                            <div class="card-title">
+                                Panasonic
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                         stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                            </div>
+                         </div>
+                        </div>
+                
+                
+                
+                        <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                            <img src="img/payment_methods.png" style="width: min-content;margin-left:55px;margin-right: 56px;" class="card-img">
+                             <div class="card-body">
+                                <div class="card-title">
+                                    Payment Methods
+                                </div>
+                               
+                              
+                                </div>
+                             </div>
+                            </div>
+                            
+            </div>
+
+            <div class="col m-4 ms-5">
+                <div class="row">
+                    <div class="bread p-1 mb-2 rounded-3 "  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+                        <div class="breadcrumb ">
+                         <div class="breadcrumb-item"><a href="index.html" class="text-decoration-none text-secondary">Home</a></div>
+                         <div class="breadcrumb-item ">register</div>
+                        </div> 
+                     </div>
+                    </div>
+                     
+
+                    <div class="row fw-bold fs-2 mb-2">
+                        Register
+                    </div>
+                      <div class="row bread rounded-3 shadow-lg" style="height: max-content;">
+                        <div class="row mt-5 ms-3 fw-bold fs-5 " style="height: max-content;">Your personal information
+                        </div>
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >Title <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                            <select class="border-1 border-dark-subtle rounded-2" id="">
+                              <option value="">mr</option>
+                              <option value="">mis</option>
+                              <option value="">miss</option>
+                            </select>
+                       </div>
+                    </div>
+                 
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >First Name <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                         <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="first name">
+                       </div>
+                    </div>
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >Last Name <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                         <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="last name">
+                       </div>
+                    </div>
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >Email <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                         <input type="email" class="border-1 border-dark-subtle rounded-3" placeholder="email">
+                       </div>
+                    </div>
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >password <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                         <input type="password" class="border-1 border-dark-subtle rounded-3" placeholder="password">
+                       </div>
+                    </div>
+                    <div class="row mt-4" style="height: max-content;">
+                        <div class="col-3 text-end"> 
+                           <label >Date of Birth  <sup>*</sup></label>
+                        
+                        </div>
+                        <div class="col "> 
+                         <input type="date" class="border-1 border-dark-subtle rounded-3" placeholder="date of birth ">
+                       </div>
+                    </div>
+                    
+                    <div class="alert alert-danger alert-dismissible fade show mt-4" style="height: max-content;">
+                        <strong>Lorem Ipsum is simply</strong>  dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+	 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                      </div>
+                      
+                    <div class="row mt-5 ms-3 fw-bold fs-5 " style="height: max-content;">Your address
+                    </div>
+             
+             
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >First Name <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="first name">
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Last Name <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="last name">
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Company<sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="Company">
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Address <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="Address">
+                     <label class="text-secondary">Apartment, suite, unit, building, floor, etc</label>
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Address (Line 2)<sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="Address Line 2">
+                    <label class="text-secondary">Street address, P.O. box, company name, c/o</label> 
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >City <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="City">
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >State <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                        <select class="border-1 border-dark-subtle rounded-2" id="">
+                            <option value="">-</option>
+                            <option value="1">Alabama</option><option value="2">Alaska</option><option value="3">Arizona</option><option value="4">Arkansas</option><option value="5">California</option><option value="6">Colorado</option><option value="7">Connecticut</option><option value="8">Delaware</option><option value="53">District of Columbia</option><option value="9">Florida</option><option value="10">Georgia</option><option value="11">Hawaii</option><option value="12">Idaho</option><option value="13">Illinois</option><option value="14">Indiana</option><option value="15">Iowa</option><option value="16">Kansas</option><option value="17">Kentucky</option><option value="18">Louisiana</option><option value="19">Maine</option><option value="20">Maryland</option><option value="21">Massachusetts</option><option value="22">Michigan</option><option value="23">Minnesota</option><option value="24">Mississippi</option><option value="25">Missouri</option><option value="26">Montana</option><option value="27">Nebraska</option><option value="28">Nevada</option><option value="29">New Hampshire</option><option value="30">New Jersey</option><option value="31">New Mexico</option><option value="32">New York</option><option value="33">North Carolina</option><option value="34">North Dakota</option><option value="35">Ohio</option><option value="36">Oklahoma</option><option value="37">Oregon</option><option value="38">Pennsylvania</option><option value="51">Puerto Rico</option><option value="39">Rhode Island</option><option value="40">South Carolina</option><option value="41">South Dakota</option><option value="42">Tennessee</option><option value="43">Texas</option><option value="52">US Virgin Islands</option><option value="44">Utah</option><option value="45">Vermont</option><option value="46">Virginia</option><option value="47">Washington</option><option value="48">West Virginia</option><option value="49">Wisconsin</option><option value="50">Wyoming</option>
+        
+                        </select>
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Zip / Postal Code <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="Zip / Postal Code">
+                   </div>
+                </div>
+                
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Additional information<sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <textarea class="border-1 border-dark-subtle rounded-3" placeholder="Additional information" name="" id="" cols="30" rows="3"></textarea>
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Home phone <sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder=" phone">
+                     <label class="text-secondary">You must register at least one phone number</label>
+                   </div>
+                </div>
+                <div class="row mt-4" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                       <label >Mobile Phone<sup>*</sup></label>
+                    
+                    </div>
+                    <div class="col "> 
+                     <input type="text" class="border-1 border-dark-subtle rounded-3" placeholder="Mobile Phone">
+                   </div>
+                </div>
+               
+                <div class="row mt-5 mb-5" style="height: max-content;">
+                    <div class="col-3 text-end"> 
+                     
+                    
+                    </div>
+                    <div class="col "> 
+                     <button class="btn border-1 border-dark-subtle bggreen text-white fs-5 shadow-sm" >Register</button>
+                   </div>
+                </div>
+
+
+
+             
+                    
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+           
+        
+
+    </div>
+    </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+   
+    
+   
+   
+    
+    
+    
+    
+        
+ 
+    
+        </div>
+       </div>
+
+      <div class="row bg-dark text-white p-5 mt-4 con">
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">YOUR ACCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">PERSONAL INFORMATION</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ADDRESSES</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">DISCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ORDER HISTORY</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">CONTACT</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">REGISTRATION</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">LEGAL NOTICE</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TERMS AND CONDITIONS</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">FAQ</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">NEW PRODUCTS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TOP SELLERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SPECIAL OFFERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">MANUFACTURERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SUPPLIERS</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div>
+                <img src="img/facebook.png" style="width: 10%;margin: 5px;" alt=""><img src="img//twitter.png" style="width: 10%;margin: 5px;" alt="">
+                <img src="img/youtube.png" style="width: 10%;margin: 5px;" alt="">
+</div>
+
+        </div>
+
+      </div>
+      <div class="position-fixed w-100 h-100 opacity-75 top-0 hidden bg-dark " id="back-padge" ></div>
+
+        
+      <div class="position-fixed bg-white rounded-3 p-3 hidden loginpadge z-1" id="vv" style="top:15%;">
+        <div class=" text-secondary fs-4 fw-bold">LOGIN</div>
+        <hr>
+        <div class="form-floating">
+            <input type="text" class="form-control" maxlength="15"  v-model="name" id="name"  placeholder required >
+            <label>your name</label>
+            
+        </div>
+        <div class="form-floating mt-3">
+            <input type="password" class="form-control" maxlength="30"  v-model="password" id="password"  placeholder required>
+            <label>password</label>
+        </div>
+        <div class="form-check form-switch m-2">
+           <input type="checkbox" class="form-check-input"   id="check" v-model="check">
+           <label form="form-check-label" id="Recomend" >Recomend me</label>
+        </div>
+       <div class="row ">
+        <div class="col-4"> <button class="btn bggreen shadow-sm text-white border-2  border-dark-subtle" :disabled="!name || !password " onclick=" n()">sign in</button></div>
+       
+        <div class="col"> <button class="btn bg  border-2  border-dark-subtle"  id="btnclose">close</button></div>
+       </div>
+      
+    </div>
+
+</body>
+
+</html>
+
+
+
+<!-- main script-->
+<!--  <div class="bread p-1 mb-2 rounded-3 "  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+                    <div class="breadcrumb ">
+                     <div class="breadcrumb-item"><a href="index.html">Home</a></div>
+                     <div class="breadcrumb-item active">register</div>
+                    </div> 
+                 </div>
+                
+
+   
+
+                
+                   <div class="row mt-4" style="height: max-content;"> 
+                        <div class="col ms-5"> 
+                            <label >First name <sup>*</sup></label>
+                             <input type="text">
+                         </div>
+                    </div>
+
+                
+                
+                
+            <div class="col back m-4 p-2" style="height: max-content;" >
+
+              
+                <div class="carousel slide" id="firstslide" data-bs-ride="carousel" >
+                    <div class="carousel-inner col1">
+                        <div class="carousel-item active text-center " >
+                            <div class="col position-relative justify-content-center" id="col1">
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/1.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/2.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/3.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/4.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="col position-relative justify-content-center" id="col2">
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/5.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/6.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/7.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/8.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="col position-relative justify-content-center" id="col2">
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/9.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/10.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/11.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/12.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="carousel-item ">
+                            <div class="col position-relative justify-content-center" id="col2">
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/b1.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/b2.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/b3.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card me-4 mb-2" style="width: max-content;border-radius: 20px;">
+                                    <div class="card-img"><img src="img/products/b4.jpg" class="card-img-top"></div>
+                                    <div class="card-body">
+                                        <div class="card-title">Product name</div>
+                                        <div class="card-text d-flex justify-content-around">
+                                            <button class="btn fs-5 shadow-sm bg-light">view</button>
+                                            <span class="fs-5 fw-bold pt-2">$220.0</span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <svg class="border border-primary border-2 rounded-3" id="next1" data-bs-target="#firstslide"
+                        data-bs-slide-to="next" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-arrow-right">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                        <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                    <svg class="border border-primary border-2 rounded-3" id="next2" data-bs-target="#firstslide"
+                        data-bs-slide="next" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="blue" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-arrow-left">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                </div>
+
+            </div>
+                
+                
+                
+                
+                
+                -->
+<!-- static scripts-->
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+var vue=new Vue({
+    el:"#vv",
+    data:{
+        name:null,
+        password:null,
+        check:null,
+      
+       
+    },
+
+})
+
+ var arr=[]
+
+
+
+
+
+function n(){
+    
+    var name =document.getElementById("name")
+ var password =document.getElementById("password")
+ var check =document.getElementById("check")
+
+
+if(name.value.length==""||name.value.length<=6)
+{
+ $("#name").addClass("is-invalid")
+ alert("your name smaller than 6 elements")
+} 
+else if (password.value.length==""||password.value.length<=6){ 
+$("#password").addClass("is-invalid")
+alert("your password smaller than 6 elements")
+}
+else
+{ 
+     $("#password").removeClass("is-invalid")
+      $("#name").removeClass("is-invalid")
+     var opj ={
+   name:name.value,
+   password:password.value
+ }
+arr.push(opj)
+  localStorage.setItem('product',JSON.stringify(arr))
+   arr= JSON.parse(localStorage.getItem('product'))
+console.log(arr[0].name)
+}
+
+ 
+
+$("#vvv").text(arr[0].name)
+
+}
+ $(".register").on("click",function(){
+    location='register.html'
+ })
+
+
+
+</script>
+<script>
+    
+    
+$("#li1").click(function(){
+    $("div").filter("#li2").slideToggle(1000)
+    $("#li4 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+})
+$("#li3").click(function(){
+    $("div").filter("#li4").slideToggle(1000)
+    $("#li2 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+ 
+
+})
+
+$("#li5").click(function(){
+    $("div").filter("#li6").slideToggle(1000)
+    $("#li2 ,#li4,#li8 ,#li10,#li12").slideUp(700)
+
+})
+
+$("#li7").click(function(){
+    $("div").filter("#li8").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li10,#li12").slideUp(700)
+})
+
+$("#li9").click(function(){
+    $("div").filter("#li10").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li12").slideUp(700)
+})
+
+$("#li11").click(function(){
+    $("div").filter("#li12").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li10").slideUp(700)
+})
+$(function(){
+    $("#nextmain1, #nextmain2").addClass("hidden")
+    
+})
+
+$(".hiddd").mouseover(function(){
+    $("#nextmain1, #nextmain2").removeClass("hidden")
+    $(".hiddd").mouseleave(function(){$("#nextmain1, #nextmain2").addClass("hidden")})
+})
+
+$("#loginn").click(function(){
+    $(".loginpadge,#back-padge").removeClass("hidden")
+ 
+})
+$("#back-padge,#btnclose").click(function(){
+    $("#back-padge,.loginpadge").addClass("hidden")
+  
+})
+
+</script>
+</body>

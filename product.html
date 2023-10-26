@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online shop cart</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/online-shopping.png">
+    <style>
+        @media screen and (max-width:767px) {
+
+           
+            #con {
+
+                display: block;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                padding-left: 25px;
+            }
+            #list{
+                width: 100%;
+                
+            }
+            #block{
+                display: block;
+            }
+         
+            .loginpadge{
+                width: 80%;
+                right:10%;
+                height: 40%;
+
+            }
+            .smallimg{
+                width: 32%;
+            }
+            .bigimg{
+                width: 100%;
+            }
+            #col2{
+                width: 66.6%;
+            }
+
+        }
+        
+        
+          
+        
+        @media (min-width:768px) and (max-width:10240px) {
+
+         
+            #con,#block {
+                display: flex;
+
+            }
+
+          
+            #list{
+                width: 23%;
+            }
+           
+            .loginpadge{
+                width: 30%;
+                right:30%;
+                height: 50%;
+            }
+            #nav{
+                height: 70px;
+            }
+            .smallimg{
+                width: 25%;
+            }
+            .bigimg{
+                width: 70%;
+            }
+            #col1{
+                width: 41%;
+            }
+            .img{
+                width:25% ;
+            }
+            .text{
+                width: 45%;
+            }
+            .detail{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100vh;overflow-x: hidden;" >
+    
+    <div style="background-color: rgb(236, 239, 245);padding:10px;" class="hiddd" >
+        <div class="container" >
+            <div class="row justify-content-around">
+                <div class="col-sm-10 d-flex"> <span class="textcolor font-monospace me-2">Welcome </span>
+                    <div class="fw-bold" id="vvv"></div>
+
+                </div>
+                <div class="col text-end"> <input type="text" class="shadow-sm rounded-3 me-2" disabled
+                        style="width: 15%;height: max-content;" v-model="">
+                    <button class="btn btn-outline-primary" style="height: max-content;font-size: small;">items in your
+                        card</button>
+                </div>
+
+            </div>
+            <nav class="navbar navbar-expand-lg bgnav  rounded-1 mt-1" id="nav">
+                <a href="#k" class="navbar-toggler" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <il><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg></il>
+                <il class="pt-4" >
+                    <input type="search" list="datalist" class="form-control" tabindex="40px" placeholder="search">
+                    <img src="img/search.png" style="position: relative;top: -35px;">
+                    <datalist id="datalist">
+                        <option value="Camera"></option>
+                        <option value="Manicure"></option>
+                        <option value="Clothes"></option>
+                        <option value="Foods"></option>
+                        <option value="HEALTH"></option>
+                    </datalist>
+
+                </il>
+
+
+                <il style="width: 20%;">
+                    <select class="form-select" id="">
+                        <option selected value="">All</option>
+                        <option value="">Clothes</option>
+                        <option value="">Foods</option>
+                        <option value="">Sport</option>
+                        <option value="">Books</option>
+                    </select>
+                </il>
+                <il><button class="btn shadow-sm backcolor text-white"> Do</button></il>
+                <div id="k" class="collapse navbar-collapse">
+                    <ul class="navbar-nav justify-content-around rounded-3  align-items-center p-2 text-white">
+
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="offer.html">Offers</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="dilvery.html">Delivery</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="contact.html">Contact</a></il>
+                        <il style="width: 100%;padding-left: 170px;"><button class="btn bggreen text-white shadow-sm" id="loginn">Login</button></il>
+
+                    </ul>
+                </div>
+
+            </nav>
+   
+        </div>
+       
+      
+       
+
+
+    </div>
+    
+    <div class="container">
+        
+        <div class="row">
+        <div id="con" style="width: 100%;">
+            <div class="cocl d-block " id="list">
+                <div class="col back mt-4 mb-4 rounded-3" style="width: 100%;height: 65px;">
+                    <img src="img/warehouse-cart-package-ribbon-1 (1).png" alt="your card">
+                    <a href="#" class="text-dark  icon-link link-underline-opacity-25
+                          icon-link-hover link-underline-dark pe-4"> items in card</a>
+                    <button class="btn btn-warning text-white font-monospace">$ 155</button>
+                </div>
+                <div class="col-3 back mb-4 rounded-3 "
+                    style="width: 90%;height:max-content;background-color:rgba(168, 168, 168, 0.332);margin-left: 15px;">
+                    <div class="row rounded-top-3 border border-secondary-subtle " style="background-color:rgba(255, 255, 255, 0.332);">
+                        <div id="li1" class="bg border-2 border-bottom">ELECTRONICS [230]</div>
+                        <div id="li2" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li3" class="bg border-2 border-bottom">CLOTHES [840]</div>
+                        <div id="li4" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li5" class="bg border-2 border-bottom">FOOD AND BEVERAGES [700]</div>
+                        <div id="li6" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li7" class="bg border-2 border-bottom">HEALTH & BEAUTY [18]</div>
+                        <div id="li8" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li9" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                        <div id="li10" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+                            <div id="li11" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                            <div id="li12" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                                <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    camera</div>
+                                <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    computer</div>
+                                <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    mopile</div>
+                                <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    sound</div>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-center align-items-center shadow-sm" style="width: 100%;">
+                    <img src="img/products/panasonic.jpg" style="width: min-content;" class="card-img">
+                     <div class="card-body">
+                        <div class="card-title">
+                            Panasonic
+                        </div>
+                       
+                        <div class="row">
+                            <div class="col d-flex">
+                                <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                     stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                </a>
+                            </div>
+                            <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                        </div>
+                     </div>
+                    </div>
+                  
+                
+                
+                    <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                        <img src="img/products/kindle.png" style="width: min-content;" class="card-img">
+                         <div class="card-body">
+                            <div class="card-title">
+                                Panasonic
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                         stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                            </div>
+                         </div>
+                        </div>
+                
+                
+                
+                        <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                            <img src="img/payment_methods.png" style="width: min-content;margin-left:55px;margin-right: 56px;" class="card-img">
+                             <div class="card-body">
+                                <div class="card-title">
+                                    Payment Methods
+                                </div>
+                               
+                              
+                                </div>
+                             </div>
+                            </div>
+                            
+            </div>
+
+            <div class="col m-4 ms-5" >
+                <div class="row">
+                    <div class="bread pt-2 mb-2 rounded-3 "  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+                        <div class="breadcrumb ">
+                         <div class="breadcrumb-item"><a href="index.html" class="icon-link link-underline-dark link-underline-opacity-0 link-underline-opacity-50-hover text-secondary">Home</a></div>
+                         <div class="breadcrumb-item "><a href="index.html" class="icon-link link-underline-dark link-underline-opacity-0 link-underline-opacity-50-hover text-secondary">Products</a> </div>
+                         <div class="breadcrumb-item "> <a href="#" class="icon-link link-underline-dark link-underline-opacity-0 link-underline-opacity-50-hover text-secondary">product Details</a></div>
+                        </div> 
+                     </div>
+                    </div>
+                     
+
+                  
+                      <div class="row bg-light rounded-3 shadow-lg" style="height: max-content;">
+                         
+                        <div class="row" id="block" >
+
+
+                          <div id="col1">
+                          <div class="row"><img src="" class="bigimg" alt=""></div>
+                          <div class="row d-flex">
+                           <img src="/img/products/large/f1.jpg" class="smallimg" id="smailimg1"  alt="">
+                           <img src="/img/products/large/f2.jpg" class="smallimg" id="smailimg2" alt="">
+                           <img src="/img/products/large/f3.jpg" class="smallimg" id="smailimg3" alt="">
+                          </div>
+
+                          <div class="row mt-3 mb-3">
+                            <div class="btn-group" style="width: max-content;">
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></button>
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-save"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path><polyline points="17 21 17 13 7 13 7 21"></polyline><polyline points="7 3 7 8 15 8"></polyline></svg></button>
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg></button>
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-up"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"></path></svg></button>
+                                <button class="btn bg border-1 border-dark-subtle border-end"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-thumbs-down"><path d="M10 15v4a3 3 0 0 0 3 3l4-9V2H5.72a2 2 0 0 0-2 1.7l-1.38 9a2 2 0 0 0 2 2.3zm7-13h2.67A2.31 2.31 0 0 1 22 4v7a2.31 2.31 0 0 1-2.33 2H17"></path></svg></button>
+                            </div>
+                             
+                          </div>
+
+                          </div>
+
+
+                          <div class="col">
+                            <div class="row">
+                                <h4 class="fw-bold">Fujifilm FinePix S2950 Digital Camera</h4>
+                                <div>- (14MP, 18x Optical Zoom) 3-inch LCD</div>
+                                <hr class="mt-4">
+                            </div>
+
+                            <div class="row">
+                                <div class="col-2 fs-5 ">$220</div>
+                                <div class="col"><input class="form-control" type="number"id="" style="width: min-content;" placeholder="amount"></div>
+                                <div class="col"><button class="btn bgblue text-white">Add to card 
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                        <circle cx="9" cy="21" r="1"></circle>
+                                        <circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                                    </svg>
+                                </button></div>
+                                <hr class="mt-4">
+                            </div>
+
+                            <div class="row">
+                                <div class="row"><h5>100 items in stock</h5></div>
+                                <div class="row d-flex">
+                                    <label class="w-25">Color</label>
+                                    <select class="form-select w-25" id="">
+                                        <option value="">Dark</option>
+                                        <option value="">Red</option>
+                                        <option value="">Blue</option>
+                                        <option value="">Brown</option>
+                                    </select>
+                                </div>
+                                <hr class="mt-4">
+                            </div>
+
+                            <div class="row" style="font-size:13px ;">{{mass}}
+                            <div class="text-end m-4"><button class="btn bg">More Details</button></div>
+                            <hr>
+                            </div>
+                          </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+                        <div class="row ">
+                          <div class="row">
+                            <ul class="nav nav-tabs justify-content-end mt-4" >
+                                <li class="nav-item"><a class="nav-link text-dark " style="padding: 2px;" id="btnr">Related Products</a></li>
+                                <li class="nav-item"><a class="nav-link text-dark active" style="padding: 2px;" id="btnd">Details Products</a></li>
+                            </ul>
+                          </div>
+
+              <div class="row  d-none m-4" id="products" style="padding: 0px;">
+                <div class="row justify-content-end">
+<button id="btnline" class="bg rounded-3 border-1 me-4" style="width: max-content;"><svg  xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4294E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+</button>
+<button id="btnblock" class="bg rounded-3 border-1" style="width: max-content;"><svg  xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#4294E9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+</button></div>
+              
+              <div class="row " id="inblock" style="margin: 0px;padding: 0px;">
+              <div class="col" >
+                <div class="row">
+                
+                    <div class="card text-center align-items-center mt-3 me-3 shadow-sm" style="width:max-content;padding: 0px;">
+                        <img src="img/products/6.jpg" style="width: min-content;" class="card-img">
+                         <div class="card-body">
+                            <div class="card-title">
+                                Product name
+                            </div>
+                            <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                           
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg me-3"><img src="img/search.png" alt=""></a>
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                         stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                            </div>
+                         </div>
+                        </div>
+                
+                        <div class="card text-center align-items-center mt-3 me-3 shadow-sm" style="width:max-content;padding: 0px;">
+                            <img src="img/products/7.jpg" style="width: min-content;" class="card-img">
+                             <div class="card-body">
+                                <div class="card-title">
+                                    Product name
+                                </div>
+                                <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                                <div class="row">
+                                    <div class="col d-flex">
+                                        <a href="#" style="width: max-content;" class="btn d-flex bg "><img src="img/search.png" alt=""></a>
+                                        <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                             stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                                </div>
+                             </div>
+                            </div>
+                
+                            <div class="card text-center align-items-center mt-3 shadow-sm" style="width:max-content;padding: 0px;">
+                                <img src="img/products/8.jpg" style="width: min-content;" class="card-img">
+                                 <div class="card-body">
+                                    <div class="card-title">
+                                        Product name
+                                    </div>
+                                    <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                                    <div class="row">
+                                        <div class="col d-flex">
+                                            <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                            <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                                 stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                            </a>
+                                        </div>
+                                        <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                                    </div>
+                                 </div>
+                                </div>
+                
+                </div>
+                
+                  <div class="row">
+                
+                    <div class="card text-center align-items-center mt-3 shadow-sm me-3" style="width:max-content;padding: 0px;">
+                        <img src="img/products/10.jpg" style="width: min-content;" class="card-img">
+                         <div class="card-body">
+                            <div class="card-title">
+                                Product name
+                            </div>
+                            <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                         stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                            </div>
+                         </div>
+                        </div>
+                
+                        <div class="card text-center align-items-center mt-3 me-3 shadow-sm" style="width:max-content;padding: 0px;">
+                            <img src="img/products/11.jpg" style="width: min-content;" class="card-img">
+                             <div class="card-body">
+                                <div class="card-title">
+                                    Product name
+                                </div>
+                                <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                                <div class="row">
+                                    <div class="col d-flex">
+                                        <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                        <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                             stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                        </a>
+                                    </div>
+                                    <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                                </div>
+                             </div>
+                            </div>
+                
+                            <div class="card text-center align-items-center mt-3 shadow-sm" style="width:max-content;padding: 0px;">
+                                <img src="img/products/12.jpg" style="width: min-content;" class="card-img">
+                                 <div class="card-body">
+                                    <div class="card-title">
+                                        Product name
+                                    </div>
+                                    <div class="card-text text-dark fw-light mb-2" style="font-size: 12px;">Lorem Ipsum is simply dummy text.</div>
+                                    <div class="row">
+                                        <div class="col d-flex">
+                                            <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                            <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                                 stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                            </a>
+                                        </div>
+                                        <div class="col backcolor rounded-3 text-white align-self-center">$220</div>
+                                    </div>
+                                 </div>
+                                </div>
+                
+                </div>
+                </div>
+
+     
+                </div>
+
+                <div class="row inline d-none" id="inline">
+                 <div class="row mt-4">
+                 <div class=" img" ><img src="img/products/4.jpg" style="width: min-content;"></div>
+
+                 <div class="text">
+                  <div class="row fw-bolder fs-4"> New | Available</div>
+                  <hr>
+                  <div class="row fw-bold fs-5">Product Name</div>
+                  <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                    spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                  <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                 </div>
+
+
+                 <div class="detail" >
+                    <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                    <div class="row justify-content-end d-flex mt-4 mb-4">
+                        <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                        <input type="checkbox" class="form-check-input" id="">
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="btn-group me-0" style="width: max-content;" >
+                            <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                 <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                            </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                            <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                        </div>
+                    </div>
+                 </div>
+                
+                
+                
+                </div>
+                <hr>
+                <div class="row">
+                    <div class=" img" ><img src="img/products/5.jpg" style="width: min-content;"></div>
+   
+                    <div class="text">
+                     <div class="row fw-bolder fs-4"> New | Available</div>
+                     <hr>
+                     <div class="row fw-bold fs-5">Product Name</div>
+                     <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                       spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                     <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                    </div>
+   
+   
+                    <div class="detail" >
+                       <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                       <div class="row justify-content-end d-flex mt-4 mb-4">
+                           <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                           <input type="checkbox" class="form-check-input" id="">
+                       </div>
+                       <div class="row justify-content-end">
+                           <div class="btn-group me-0" style="width: max-content;" >
+                               <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                               </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                               <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                           </div>
+                       </div>
+                    </div>
+                   
+                   
+                   
+                   </div>
+                   <hr>
+                   <div class="row">
+                    <div class=" img" ><img src="img/products/6.jpg" style="width: min-content;"></div>
+   
+                    <div class="text">
+                     <div class="row fw-bolder fs-4"> New | Available</div>
+                     <hr>
+                     <div class="row fw-bold fs-5">Product Name</div>
+                     <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                       spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                     <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                    </div>
+   
+   
+                    <div class="detail" >
+                       <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                       <div class="row justify-content-end d-flex mt-4 mb-4">
+                           <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                           <input type="checkbox" class="form-check-input" id="">
+                       </div>
+                       <div class="row justify-content-end">
+                           <div class="btn-group me-0" style="width: max-content;" >
+                               <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                               </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                               <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                           </div>
+                       </div>
+                    </div>
+                   
+                   
+                   
+                   </div>
+                   <hr>
+                   <div class="row">
+                    <div class=" img" ><img src="img/products/7.jpg" style="width: min-content;"></div>
+   
+                    <div class="text">
+                     <div class="row fw-bolder fs-4"> New | Available</div>
+                     <hr>
+                     <div class="row fw-bold fs-5">Product Name</div>
+                     <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                       spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                     <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                    </div>
+   
+   
+                    <div class="detail" >
+                       <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                       <div class="row justify-content-end d-flex mt-4 mb-4">
+                           <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                           <input type="checkbox" class="form-check-input" id="">
+                       </div>
+                       <div class="row justify-content-end">
+                           <div class="btn-group me-0" style="width: max-content;" >
+                               <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                               </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                               <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                           </div>
+                       </div>
+                    </div>
+                   
+                   
+                   
+                   </div>
+                   <hr>
+                   <div class="row">
+                    <div class=" img" ><img src="img/products/8.jpg" style="width: min-content;"></div>
+   
+                    <div class="text">
+                     <div class="row fw-bolder fs-4"> New | Available</div>
+                     <hr>
+                     <div class="row fw-bold fs-5">Product Name</div>
+                     <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                       spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                     <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                    </div>
+   
+   
+                    <div class="detail" >
+                       <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                       <div class="row justify-content-end d-flex mt-4 mb-4">
+                           <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                           <input type="checkbox" class="form-check-input" id="">
+                       </div>
+                       <div class="row justify-content-end">
+                           <div class="btn-group me-0" style="width: max-content;" >
+                               <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                               </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                               <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                           </div>
+                       </div>
+                    </div>
+                   
+                   
+                   
+                   </div>
+                   <hr>
+                   <div class="row">
+                    <div class=" img" ><img src="img/products/9.jpg" style="width: min-content;"></div>
+   
+                    <div class="text">
+                     <div class="row fw-bolder fs-4"> New | Available</div>
+                     <hr>
+                     <div class="row fw-bold fs-5">Product Name</div>
+                     <div class="row fw-light">Nowadays the lingerie industry is one of the most successful business 
+                       spheres.We always stay in touch with the latest fashion tendencies - that is why our goods are so popular..</div>
+                     <div class="row justify-content-end mt-4 mb-4"><button class="btn bg"style="width: max-content;">View Details</button></div>
+                    </div>
+   
+   
+                    <div class="detail" >
+                       <div class="row justify-content-end fs-4 fw-bold">$222</div>
+                       <div class="row justify-content-end d-flex mt-4 mb-4">
+                           <label style="width: max-content;font-size: small;">Adds product to compair</label>
+                           <input type="checkbox" class="form-check-input" id="">
+                       </div>
+                       <div class="row justify-content-end">
+                           <div class="btn-group me-0" style="width: max-content;" >
+                               <button style="width: max-content;" class="bgblue rounded-3 rounded-end-0 text-white">Add to card <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart">
+                                    <circle cx="9" cy="21" r="1"></circle> <circle cx="20" cy="21" r="1">
+                               </circle> <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg></button>
+                               <button style="width: max-content;" class="btn bg rounded-end-2"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+                           </div>
+                       </div>
+                    </div>
+                   
+                   
+                   
+                   </div>
+                   <hr>
+                   
+
+                </div>
+
+</div>
+
+<div class="row  m-4" id="about">
+
+<div class="row">
+    <h4>Product Information</h4>
+    <table class="table table-bordered">
+        <thead>
+        <tr>
+            <th colspan="2" class="bg-transparent">
+                Product Details
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td class="bg-transparent">Brand:</td>
+            <td class="bg-transparent">Fujifilm</td>
+        </tr>
+        <tr>
+            <td class="bg-transparent">Model:</td>
+            <td class="bg-transparent">FinePix S2950HD</td>
+        </tr>
+        <tr>
+            <td class="bg-transparent">Released on:</td>
+            <td class="bg-transparent">2011-01-28</td>
+        </tr>
+        <tr>
+            <td class="bg-transparent">Dimensions:</td>
+            <td class="bg-transparent">5.50" h x 5.50" w x 2.00" l, .75 pounds</td>
+        </tr>
+        <tr>
+            <td class="bg-transparent">Display size:</td>
+            <td class="bg-transparent">3</td>
+        </tr>
+        
+    </tbody>
+    </table>
+</div>
+<div class="row mt-3">
+    <h6>Features</h6>
+    <div class="fw-light fs-6">14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card).
+        OND363338</div>
+</div>
+<div class="row mt-3">
+    <h5>Editorial Reviews</h5>
+   
+</div>
+<div class="row">
+    <h6>Manufacturer's Description</h6>
+    <div class="fw-light fs-6">With a generous 18x Fujinon optical zoom lens, the S2950 really packs a punch, especially when matched with its 14 megapixel sensor, large 3.0" LCD screen and 720p HD (30fps) movie capture.</div>
+</div>
+<div class="row mt-3">
+    <h6>Electric powered Fujinon 18x zoom lens</h6>
+    <div class="fw-light fs-6">The S2950 sports an impressive 28mm – 504mm* high precision Fujinon optical zoom lens. Simple to operate with an electric powered zoom lever, the huge zoom range means that you can capture all the detail, even when you're at a considerable distance away. You can even operate the zoom during video shooting. Unlike a bulky D-SLR, bridge cameras allow you great versatility of zoom, without the hassle of carrying a bag of lenses.</div>
+</div>
+<div class="row mt-3">
+    <h6>Impressive panoramas</h6>
+    <div class="fw-light fs-6">With its easy to use Panoramic shooting mode you can get creative on the S2950, however basic your skills, and rest assured that you will not risk shooting uneven landscapes or shaky horizons. The camera enables you to take three successive shots with a helpful tool which automatically releases the shutter once the images are fully aligned to seamlessly stitch the shots together in-camera. It's so easy and the results are impressive.</div>
+</div>
+<div class="row mt-3">
+    <h6>Sharp, clear shots</h6>
+    <div class="fw-light fs-6">Even at the longest zoom settings or in the most challenging of lighting conditions, the S2950 is able to produce crisp, clean results. With its mechanically stabilised 1/2 3", 14 megapixel CCD sensor, and high ISO sensitivity settings, Fujifilm's Dual Image Stabilisation technology combines to reduce the blurring effects of both hand-shake and subject movement to provide superb pictures.</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+
+         
+    </div>
+    </div>
+    </div>
+
+
+    
+        </div>
+       </div>
+
+      <div class="row bg-dark text-white p-5 mt-4 con">
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">YOUR ACCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">PERSONAL INFORMATION</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ADDRESSES</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">DISCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ORDER HISTORY</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">CONTACT</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">REGISTRATION</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">LEGAL NOTICE</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TERMS AND CONDITIONS</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">FAQ</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">NEW PRODUCTS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TOP SELLERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SPECIAL OFFERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">MANUFACTURERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SUPPLIERS</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div>
+                <img src="img/facebook.png" style="width: 10%;margin: 5px;" alt=""><img src="img//twitter.png" style="width: 10%;margin: 5px;" alt="">
+                <img src="img/youtube.png" style="width: 10%;margin: 5px;" alt="">
+</div>
+
+        </div>
+
+      </div>
+      <div class="position-fixed w-100 h-100 opacity-75 top-0 hidden bg-dark " id="back-padge" ></div>
+
+        
+      <div class="position-fixed bg-white rounded-3 p-3 hidden loginpadge z-1" id="vv" style="top:15%;">
+        <div class=" text-secondary fs-4 fw-bold">LOGIN</div>
+        <hr>
+        <div class="form-floating">
+            <input type="text" class="form-control" maxlength="15"  v-model="name" id="name"  placeholder required >
+            <label>your name</label>
+            
+        </div>
+        <div class="form-floating mt-3">
+            <input type="password" class="form-control" maxlength="30"  v-model="password" id="password"  placeholder required>
+            <label>password</label>
+        </div>
+        <div class="form-check form-switch m-2">
+           <input type="checkbox" class="form-check-input"   id="check" v-model="check">
+           <label form="form-check-label" id="Recomend" >Recomend me</label>
+        </div>
+       <div class="row ">
+        <div class="col-4"> <button class="btn bggreen shadow-sm text-white border-2  border-dark-subtle" :disabled="!name || !password " onclick=" n()">sign in</button></div>
+       
+        <div class="col"> <button class="btn bg  border-2  border-dark-subtle"  id="btnclose">close</button></div>
+       </div>
+      
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- main script-->
+<!-- static scripts-->
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+    
+var vue=new Vue({
+    el:"#vv",
+    data:{
+      mass:"14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card)."
+    },
+
+})
+
+ var arr=[]
+
+
+
+
+
+function n(){
+    
+    var name =document.getElementById("name")
+ var password =document.getElementById("password")
+ var check =document.getElementById("check")
+
+
+if(name.value.length==""||name.value.length<=6)
+{
+ $("#name").addClass("is-invalid")
+ alert("your name smaller than 6 elements")
+} 
+else if (password.value.length==""||password.value.length<=6){ 
+$("#password").addClass("is-invalid")
+alert("your password smaller than 6 elements")
+}
+else
+{ 
+     $("#password").removeClass("is-invalid")
+      $("#name").removeClass("is-invalid")
+     var opj ={
+   name:name.value,
+   password:password.value
+ }
+arr.push(opj)
+  localStorage.setItem('product',JSON.stringify(arr))
+   arr= JSON.parse(localStorage.getItem('product'))
+console.log(arr[0].name)
+}
+
+ 
+
+$("#vvv").text(arr[0].name)
+
+}
+ $(".register").on("click",function(){
+    location='register.html'
+ })
+
+
+
+</script>
+<script>
+    
+    
+$("#li1").click(function(){
+    $("div").filter("#li2").slideToggle(1000)
+    $("#li4 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+})
+$("#li3").click(function(){
+    $("div").filter("#li4").slideToggle(1000)
+    $("#li2 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+ 
+
+})
+
+$("#li5").click(function(){
+    $("div").filter("#li6").slideToggle(1000)
+    $("#li2 ,#li4,#li8 ,#li10,#li12").slideUp(700)
+
+})
+
+$("#li7").click(function(){
+    $("div").filter("#li8").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li10,#li12").slideUp(700)
+})
+
+$("#li9").click(function(){
+    $("div").filter("#li10").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li12").slideUp(700)
+})
+
+$("#li11").click(function(){
+    $("div").filter("#li12").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li10").slideUp(700)
+})
+$(function(){
+$(".bigimg").prop("src","/img/products/large/3.jpg")
+})
+$("#smailimg1").click(function(){
+  $(".bigimg").prop("src","/img/products/large/f1.jpg")  
+})
+$("#smailimg2").click(function(){
+  $(".bigimg").prop("src","/img/products/large/f2.jpg")  
+})
+$("#smailimg3").click(function(){
+  $(".bigimg").prop("src","/img/products/large/f3.jpg")  
+})
+
+
+$("#loginn").click(function(){
+    $(".loginpadge,#back-padge").removeClass("hidden")
+ 
+})
+$("#back-padge,#btnclose").click(function(){
+    $("#back-padge,.loginpadge").addClass("hidden")
+  
+})
+$("#btnr").click(function(){
+    $(this).addClass("active")
+    $("#btnd").removeClass("active")
+
+    $("#about").fadeOut(500)
+    $("#products").removeClass("d-none")
+    $("#products").fadeIn(600)
+})
+$("#btnd").click(function(){
+    $(this).addClass("active")
+    $("#btnr").removeClass("active")
+    $("#about").fadeIn(600)
+    $("#products").fadeOut(500)
+})
+
+$("#btnline").click(function(){
+    $("#inblock").addClass("d-none")
+    $("#inline").removeClass("d-none")
+})
+$("#btnblock").click(function(){
+    $("#inblock").removeClass("d-none")
+    $("#inline").addClass("d-none")
+})
+
+
+</script>
+</body>

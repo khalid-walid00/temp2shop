@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online shop cart</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/online-shopping.png">
+    <style>
+        @media screen and (max-width:767px) {
+
+           
+            #con {
+
+                display: block;
+                position: relative;
+                justify-content: center;
+                text-align: center;
+                padding-left: 25px;
+            }
+            #list{
+                width: 100%;
+                
+            }
+            #block{
+                display: block;
+            }
+         
+            .loginpadge{
+                width: 80%;
+                right:10%;
+                height: 40%;
+
+            }
+            .smallimg{
+                width: 32%;
+            }
+            .bigimg{
+                width: 100%;
+            }
+            #col2{
+                width: 66.6%;
+            }
+
+        }
+        
+        
+          
+        
+        @media (min-width:768px) and (max-width:10240px) {
+
+         
+            #con,#block {
+                display: flex;
+
+            }
+
+          
+            #list{
+                width: 23%;
+            }
+           
+            .loginpadge{
+                width: 30%;
+                right:30%;
+                height: 50%;
+            }
+            #nav{
+                height: 70px;
+            }
+            .smallimg{
+                width: 25%;
+            }
+            .bigimg{
+                width: 70%;
+            }
+            #col1{
+                width: 41%;
+            }
+            .img{
+                width:25% ;
+            }
+            .text{
+                width: 45%;
+            }
+            .detail{
+                width: 30%;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100vh;overflow-x: hidden;" >
+    
+    <div style="background-color: rgb(236, 239, 245);padding:10px;" class="hiddd" >
+        <div class="container" >
+            <div class="row justify-content-around">
+                <div class="col-sm-10 d-flex"> <span class="textcolor font-monospace me-2">Welcome </span>
+                    <div class="fw-bold" id="vvv"></div>
+
+                </div>
+                <div class="col text-end"> <input type="text" class="shadow-sm rounded-3 me-2" disabled
+                        style="width: 15%;height: max-content;">
+                    <a href="card.html" class="btn btn-outline-primary" style="height: max-content;font-size: small;">items in your
+                        card</a>
+                </div>
+
+            </div>
+            <nav class="navbar navbar-expand-lg bgnav  rounded-1 mt-1" id="nav">
+                <a href="#k" class="navbar-toggler" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <il><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg></il>
+                <il class="pt-4" >
+                    <input type="search" list="datalist" class="form-control" tabindex="40px" placeholder="search">
+                    <img src="img/search.png" style="position: relative;top: -35px;">
+                    <datalist id="datalist">
+                        <option value="Camera"></option>
+                        <option value="Manicure"></option>
+                        <option value="Clothes"></option>
+                        <option value="Foods"></option>
+                        <option value="HEALTH"></option>
+                    </datalist>
+
+                </il>
+
+
+                <il style="width: 20%;">
+                    <select class="form-select" id="">
+                        <option selected value="">All</option>
+                        <option value="">Clothes</option>
+                        <option value="">Foods</option>
+                        <option value="">Sport</option>
+                        <option value="">Books</option>
+                    </select>
+                </il>
+                <il><a href="productss.html" class="btn shadow-sm backcolor text-white"> Do</a></il>
+                <div id="k" class="collapse navbar-collapse">
+                    <ul class="navbar-nav justify-content-around rounded-3  align-items-center p-2 text-white">
+
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="offer.html">Offers</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="dilvery.html">Delivery</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="contact.html">Contact</a></il>
+                        <il style="width: 100%;padding-left: 170px;"><button class="btn bggreen text-white shadow-sm" id="loginn">Login</button></il>
+
+                    </ul>
+                </div>
+
+            </nav>
+   
+        </div>
+       
+      
+       
+
+
+    </div>
+    
+    <div class="container">
+        
+        <div class="row">
+        <div id="con" style="width: 100%;">
+            <div class="cocl d-block " id="list">
+                <div class="col back mt-4 mb-4 rounded-3" style="width: 100%;height: 65px;">
+                    <img src="img/warehouse-cart-package-ribbon-1 (1).png" alt="your card">
+                    <a href="card.html" class="text-dark  icon-link link-underline-opacity-25
+                          icon-link-hover link-underline-dark pe-4"> items in card</a>
+                    <button class="btn btn-warning text-white font-monospace">$ 155</button>
+                </div>
+                <div class="col-3 back mb-4 rounded-3 "
+                    style="width: 90%;height:max-content;background-color:rgba(168, 168, 168, 0.332);margin-left: 15px;">
+                    <div class="row rounded-top-3 border border-secondary-subtle " style="background-color:rgba(255, 255, 255, 0.332);">
+                        <div id="li1" class="bg border-2 border-bottom">ELECTRONICS [230]</div>
+                        <div id="li2" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li3" class="bg border-2 border-bottom">CLOTHES [840]</div>
+                        <div id="li4" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li5" class="bg border-2 border-bottom">FOOD AND BEVERAGES [700]</div>
+                        <div id="li6" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li7" class="bg border-2 border-bottom">HEALTH & BEAUTY [18]</div>
+                        <div id="li8" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+
+                            <div id="li9" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                        <div id="li10" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                            <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                camera</div>
+                            <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                computer</div>
+                            <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                mopile</div>
+                            <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                    viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"
+                                    class="feather feather-chevron-right">
+                                    <polyline points="9 18 15 12 9 6"></polyline>
+                                </svg>
+                                sound</div>
+                            </div>
+                            <div id="li11" class="bg border-2 border-bottom">SPORTS & LEISURE [58]</div>
+                            <div id="li12" class=" hidden" style="background-color:rgba(168, 168, 168, 0.332)">
+                                <div class="gggggggh11"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    camera</div>
+                                <div class="gggggggh22"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    computer</div>
+                                <div class="gggggggh33"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    mopile</div>
+                                <div class="gggggggh44"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-chevron-right">
+                                        <polyline points="9 18 15 12 9 6"></polyline>
+                                    </svg>
+                                    sound</div>
+                                </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card text-center align-items-center shadow-sm" style="width: 100%;">
+                    <img src="img/products/panasonic.jpg" style="width: min-content;" class="card-img">
+                     <div class="card-body">
+                        <div class="card-title">
+                            Panasonic
+                        </div>
+                       
+                        <div class="row">
+                            <div class="col d-flex">
+                                <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                     stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                </a>
+                            </div>
+                            <div class="col backcolor rounded-3 text-white align-self-center">$140</div>
+                        </div>
+                     </div>
+                    </div>
+                  
+                
+                
+                    <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                        <img src="img/products/kindle.png" style="width: min-content;" class="card-img">
+                         <div class="card-body">
+                            <div class="card-title">
+                                Panasonic
+                            </div>
+                           
+                            <div class="row">
+                                <div class="col d-flex">
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg me-2"><img src="img/search.png" alt=""></a>
+                                    <a href="#" style="width: max-content;" class="btn d-flex bg">add to
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
+                                         stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+                                    </a>
+                                </div>
+                                <div class="col backcolor rounded-3 text-white align-self-center">$140</div>
+                            </div>
+                         </div>
+                        </div>
+                
+                
+                
+                        <div class="card text-center align-items-center mt-3 shadow-sm" style="width: 100%;">
+                            <img src="img/payment_methods.png" style="width: min-content;margin-left:55px;margin-right: 56px;" class="card-img">
+                             <div class="card-body">
+                                <div class="card-title">
+                                    Payment Methods
+                                </div>
+                               
+                              
+                                </div>
+                             </div>
+                            </div>
+                            
+            </div>
+
+            <div class="col m-4 ms-5">
+                <div class="row">
+                    <div class="bread pt-2 mb-2 rounded-3 "  style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);">
+                        <div class="breadcrumb ">
+                         <div class="breadcrumb-item"><a href="index.html" class="icon-link link-underline-dark link-underline-opacity-0 link-underline-opacity-50-hover text-secondary">Home</a></div>
+                         <div class="breadcrumb-item "><a href="index.html" class="icon-link link-underline-dark link-underline-opacity-0 link-underline-opacity-50-hover text-dark">Login</a> </div>
+                        </div> 
+                     </div>
+                    </div>
+                  
+                <div class="row bg-light rounded-2 shadow-lg" style="height: max-content;">
+                    <div class="row fs-5 fw-bold m-3">Login</div> <hr>  
+                     <div class="row">
+                            <div class="col p-5 bg rounded-4 m-5 me-4">
+                                 <div class="row fw-bold">CREATE YOUR ACCOUNT</div>
+                                 <div class="row blockquote-footer mt-4">Enter your e-mail address to create an account.
+                                 </div>
+                                 <div class="row mt-4">E-mail address
+                                 </div>
+                                 <div class="row "><input type="text" style="width: max-content;" class="border border-secondary-subtle border-1 rounded-2" placeholder="Email"></div>
+                             <div class="row mt-4"><a href="register.html" class="btn  shadow-sm bg border border-2 border-dark-subtle rounded-3  " style="width: max-content;font-size: small;">Create your account</a></div>
+                    </div>
+                    <div class="col p-5 bg rounded-4 m-5 ms-4">
+                        <div class="row fw-bold">ALREADY REGISTERED ?</div>
+                        <div class="row mt-4">E-mail address
+                        </div>
+                        <div class="row "><input type="text" style="width: max-content;" class="border border-secondary-subtle border-1 rounded-2" placeholder="Email"></div>
+                    
+                        <div class="row mt-4">Password
+                        </div>
+                        <div class="row "><input type="text" style="width: max-content;" class="border border-secondary-subtle border-1 rounded-2" placeholder="Password"></div>
+                    <div class="row mt-4"><button class="btn  shadow-sm bg border border-2 border-dark-subtle rounded-3  " style="width: max-content;font-size: small;">Sign</button>
+                         <a href="forgetpass.html" style="font-size: small;width: max-content;" class="icon-link text-dark  link-underline-opacity-0 link-underline-opacity-100-hover link-underline-dark">Forget your password ?</a></div>
+                       </div>
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+    </div>
+    </div>
+
+
+    
+        </div>
+       </div>
+
+      <div class="row bg-dark text-white p-5 mt-4 con">
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">YOUR ACCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">PERSONAL INFORMATION</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ADDRESSES</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">DISCOUNT</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">ORDER HISTORY</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">CONTACT</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">REGISTRATION</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">LEGAL NOTICE</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TERMS AND CONDITIONS</a>
+</div> 
+            <div class="m-2" ><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">FAQ</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">NEW PRODUCTS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">TOP SELLERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SPECIAL OFFERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">MANUFACTURERS</a>
+</div>
+            <div class="m-2"><a href="" class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light " style="font-size: 12px;">SUPPLIERS</a>
+</div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div>
+                <img src="img/facebook.png" style="width: 10%;margin: 5px;" alt=""><img src="img//twitter.png" style="width: 10%;margin: 5px;" alt="">
+                <img src="img/youtube.png" style="width: 10%;margin: 5px;" alt="">
+</div>
+
+        </div>
+
+      </div>
+      <div class="position-fixed w-100 h-100 opacity-75 top-0 hidden bg-dark " id="back-padge" ></div>
+
+        
+      <div class="position-fixed bg-white rounded-3 p-3 hidden loginpadge z-1" id="vv" style="top:15%;">
+        <div class=" text-secondary fs-4 fw-bold">LOGIN</div>
+        <hr>
+        <div class="form-floating">
+            <input type="text" class="form-control" maxlength="15"  v-model="name" id="name"  placeholder required >
+            <label>your name</label>
+            
+        </div>
+        <div class="form-floating mt-3">
+            <input type="password" class="form-control" maxlength="30"  v-model="password" id="password"  placeholder required>
+            <label>password</label>
+        </div>
+        <div class="form-check form-switch m-2">
+           <input type="checkbox" class="form-check-input"   id="check" v-model="check">
+           <label form="form-check-label" id="Recomend" >Recomend me</label>
+        </div>
+       <div class="row ">
+        <div class="col-4"> <button class="btn bggreen shadow-sm text-white border-2  border-dark-subtle" :disabled="!name || !password " onclick=" n()">sign in</button></div>
+       
+        <div class="col"> <button class="btn bg  border-2  border-dark-subtle"  id="btnclose">close</button></div>
+       </div>
+      
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
+
+
+
+<!-- main script-->
+<!-- static scripts-->
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+
+var vue=new Vue({
+    el:"#vv",
+    data:{
+        name:null,
+        password:null,
+        check:null,
+      
+       
+    },
+
+})
+ var arr=[]
+
+
+
+
+
+function n(){
+    
+    var name =document.getElementById("name")
+ var password =document.getElementById("password")
+ var check =document.getElementById("check")
+
+
+if(name.value.length==""||name.value.length<=6)
+{
+ $("#name").addClass("is-invalid")
+ alert("your name smaller than 6 elements")
+} 
+else if (password.value.length==""||password.value.length<=6){ 
+$("#password").addClass("is-invalid")
+alert("your password smaller than 6 elements")
+}
+else
+{ 
+     $("#password").removeClass("is-invalid")
+      $("#name").removeClass("is-invalid")
+     var opj ={
+   name:name.value,
+   password:password.value
+ }
+arr.push(opj)
+  localStorage.setItem('product',JSON.stringify(arr))
+   arr= JSON.parse(localStorage.getItem('product'))
+console.log(arr[0].name)
+}
+
+ 
+
+$("#vvv").text(arr[0].name)
+
+}
+
+</script>
+<script>
+    
+    
+$("#li1").click(function(){
+    $("div").filter("#li2").slideToggle(1000)
+    $("#li4 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+})
+$("#li3").click(function(){
+    $("div").filter("#li4").slideToggle(1000)
+    $("#li2 ,#li6,#li8 ,#li10,#li12").slideUp(700)
+ 
+ 
+
+})
+
+$("#li5").click(function(){
+    $("div").filter("#li6").slideToggle(1000)
+    $("#li2 ,#li4,#li8 ,#li10,#li12").slideUp(700)
+
+})
+
+$("#li7").click(function(){
+    $("div").filter("#li8").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li10,#li12").slideUp(700)
+})
+
+$("#li9").click(function(){
+    $("div").filter("#li10").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li12").slideUp(700)
+})
+
+$("#li11").click(function(){
+    $("div").filter("#li12").slideToggle(1000)
+    $("#li2 ,#li4,#li6 ,#li8,#li10").slideUp(700)
+})
+
+$("#loginn").click(function(){
+    $(".loginpadge,#back-padge").removeClass("hidden")
+ 
+})
+$("#back-padge,#btnclose").click(function(){
+    $("#back-padge,.loginpadge").addClass("hidden")
+  
+})
+$(".gggggggh11,.gggggggh22,.gggggggh33,.gggggggh44").click(function(){
+    location='productss.html'
+ })
+
+
+</script>
+</body>

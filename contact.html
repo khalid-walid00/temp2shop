@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online shop cart</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="icon" href="img/online-shopping.png">
+    <style>
+        @media screen and (max-width:767px) {
+
+            .loginpadge {
+                width: 80%;
+                right: 10%;
+                height: 40%;
+
+            }
+
+        }
+
+
+
+
+        @media (min-width:768px) and (max-width:10240px) {
+
+
+
+            .loginpadge {
+                width: 30%;
+                right: 30%;
+                height: 50%;
+            }
+
+            #nav {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body style="height: 100vh;overflow-x: hidden;">
+
+    <div style="background-color: rgb(236, 239, 245);padding:10px;" class="hiddd">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-sm-10 d-flex"> <span class="textcolor font-monospace me-2">Welcome </span>
+                    <div class="fw-bold" id="vvv"></div>
+
+                </div>
+                <div class="col text-end"> <input type="text" class="shadow-sm rounded-3 me-2" disabled
+                        style="width: 15%;height: max-content;" v-model="">
+                    <a href="card.html" class="btn btn-outline-primary"
+                        style="height: max-content;font-size: small;">items in your
+                        card</a>
+                </div>
+
+            </div>
+            <nav class="navbar navbar-expand-lg bgnav  rounded-1 mt-1 " id="nav">
+                <a href="#k" class="navbar-toggler" data-bs-toggle="collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+                <il><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-shopping-cart">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg></il>
+                <il class="pt-4">
+                    <input type="search" list="datalist" class="form-control" tabindex="40px" placeholder="search">
+                    <img src="img/search.png" style="position: relative;top: -35px;">
+                    <datalist id="datalist">
+                        <option value="Camera"></option>
+                        <option value="Manicure"></option>
+                        <option value="Clothes"></option>
+                        <option value="Foods"></option>
+                        <option value="HEALTH"></option>
+                    </datalist>
+
+                </il>
+
+
+                <il style="width: 20%;">
+                    <select class="form-select" id="">
+                        <option selected value="">All</option>
+                        <opFtion value="">Clothes</option>
+                        <option value="">Foods</option>
+                        <option value="">Sport</option>
+                        <option value="">Books</option>
+                    </select>
+                </il>
+                <il><a href="productss.html" class="btn shadow-sm backcolor text-white"> Do</a></il>
+                <div id="k" class="collapse navbar-collapse">
+                    <ul class="navbar-nav justify-content-around rounded-3  align-items-center p-2 text-white">
+
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="offer.html">Offers</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="dilvery.html">Delivery</a></il>
+                        <il style="width: 100%;border-bottom: 1px solid white;padding-bottom: 3px;"><a
+                                class="text-decoration-none text-white " href="contact.html">Contact</a></il>
+                        <il style="width: 100%;padding-left: 170px;"><button class="btn bggreen text-white shadow-sm"
+                                id="loginn">Login</button></il>
+
+                    </ul>
+                </div>
+
+            </nav>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <div class="container">
+        <hr>
+        <div class="row fs-1 fw-bolder ms-2">Visit us</div>
+        <hr>
+        <div class="row ms-2">
+            <div class="col me-2">
+                <div class="row fs-5 fw-bold">Contact Details</div>
+                <div class="row mt-4 mb-4">18 Fresno,<br>
+                    CA 93727, USA
+                </div>
+                <div class="row">info@bootsshop.com
+                    ﻿Tel 123-456-6780<br>
+                    Fax 123-456-5679
+                    web:bootsshop.com</div>
+            </div>
+
+            <div class="col me-2">
+                <div class="row fs-5 fw-bold">Opening Hours</div>
+                <div class="row">Monday - Friday
+                    <div>09:00am - 09:00pm</div>
+                </div>
+                <div class="row">Saturday
+                    <div>09:00am - 07:00pm</div>
+                </div>
+                <div class="row">Sunday
+                    <div>12:30pm - 06:00pm</div>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="row fs-5 fw-bold">Email Us</div>
+                <div class="row form-floating mt-3">
+
+                    <input class="form-control" type="text" placeholder="">
+                    <label>name</label>
+
+                </div>
+                <div class="row form-floating mt-3">
+
+                    <input class="form-control" type="text" placeholder="">
+                    <label>email</label>
+
+                </div>
+                <div class="row form-floating mt-3">
+
+                    <input class="form-control" type="text" placeholder="">
+                    <label>subjet</label>
+
+                </div>
+                <div class="row form-floating mt-3">
+
+                    <textarea class="form-control" id="" cols="30" rows="7"></textarea>
+                    <label>message</label>
+
+                </div>
+                <div class="row form-floating mt-3">
+
+                    <button class="btn shadow-lg bg border-1 border-secondary-subtle"> send messages</button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="row mt-4">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13667.155202120153!2d31.581551453577525!3d31.087801266606903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f77e6533dff507%3A0x84304adcc15cc0cd!2sDikirnis%2C%20Madinet%20Dikirnis%2C%20Dikirnis%2C%20Dakahlia%20Governorate%2C%20Egypt!5e0!3m2!1sen!2sus!4v1695461966106!5m2!1sen!2sus"
+                width="600" height="170" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+
+
+    </div>
+
+
+    <div class="row bg-dark text-white p-5 mt-4 con">
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href="login.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">YOUR ACCOUNT</a>
+            </div>
+            <div class="m-2"><a href="login.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">PERSONAL INFORMATION</a>
+            </div>
+            <div class="m-2"><a href="login.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">ADDRESSES</a>
+            </div>
+            <div class="m-2"><a href="login.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">DISCOUNT</a>
+            </div>
+            <div class="m-2"><a href="login.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">ORDER HISTORY</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href="contact.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">CONTACT</a>
+            </div>
+            <div class="m-2"><a href="register.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">REGISTRATION</a>
+            </div>
+            <div class="m-2"><a href="dilvery.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">LEGAL NOTICE</a>
+            </div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">TERMS AND CONDITIONS</a>
+            </div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">FAQ</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">NEW PRODUCTS</a>
+            </div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">TOP SELLERS</a>
+            </div>
+            <div class="m-2"><a href="offer.html"
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">SPECIAL OFFERS</a>
+            </div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">MANUFACTURERS</a>
+            </div>
+            <div class="m-2"><a href=""
+                    class="text-white icon-link icon-link-hover link-underline-light link-underline-opacity-0 link-underline-opacity-50-hover fw-light "
+                    style="font-size: 12px;">SUPPLIERS</a>
+            </div>
+        </div>
+
+        <div class="col">
+            <div class="fw-bold fs-5">INFORMATION</div>
+            <div>
+                <img src="img/facebook.png" style="width: 10%;margin: 5px;" alt=""><img src="img//twitter.png"
+                    style="width: 10%;margin: 5px;" alt="">
+                <img src="img/youtube.png" style="width: 10%;margin: 5px;" alt="">
+            </div>
+
+        </div>
+
+    </div>
+    <div class="position-fixed w-100 h-100 opacity-75 top-0 hidden bg-dark " id="back-padge"></div>
+
+
+    <div class="position-fixed bg-white rounded-3 p-3 hidden loginpadge z-1" id="vv" style="top:15%;">
+        <div class=" text-secondary fs-4 fw-bold">LOGIN</div>
+        <hr>
+        <div class="form-floating">
+            <input type="text" class="form-control" maxlength="15" v-model="name" id="name" placeholder required>
+            <label>your name</label>
+
+        </div>
+        <div class="form-floating mt-3">
+            <input type="password" class="form-control" maxlength="30" v-model="password" id="password" placeholder
+                required>
+            <label>password</label>
+        </div>
+        <div class="form-check form-switch m-2">
+            <input type="checkbox" class="form-check-input" id="check" v-model="check">
+            <label form="form-check-label" id="Recomend">Recomend me</label>
+        </div>
+        <div class="row ">
+            <div class="col-4"> <button class="btn bggreen shadow-sm text-white border-2  border-dark-subtle"
+                    :disabled="!name || !password " onclick=" n()">sign in</button></div>
+
+            <div class="col"> <button class="btn bg  border-2  border-dark-subtle" id="btnclose">close</button></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+<!-- main script-->
+
+<!-- static scripts-->
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/vue.js"></script>
+<script>
+
+    var arr = []
+
+    function n() {
+
+        var name = document.getElementById("name")
+        var password = document.getElementById("password")
+        var check = document.getElementById("check")
+
+
+        if (name.value.length == "" || name.value.length <= 6) {
+            $("#name").addClass("is-invalid")
+            alert("your name smaller than 6 elements")
+        }
+        else if (password.value.length == "" || password.value.length <= 6) {
+            $("#password").addClass("is-invalid")
+            alert("your password smaller than 6 elements")
+        }
+        else {
+            $("#password").removeClass("is-invalid")
+            $("#name").removeClass("is-invalid")
+            var opj = {
+                name: name.value,
+                password: password.value
+            }
+            arr.push(opj)
+            localStorage.setItem('product', JSON.stringify(arr))
+            arr = JSON.parse(localStorage.getItem('product'))
+            console.log(arr[0].name)
+        }
+
+
+
+        $("#vvv").text(arr[0].name)
+
+    }
+    $(".register").on("click", function () {
+        location = 'register.html'
+    })
+
+
+
+</script>
+<script>
+
+
+
+    $("#loginn").click(function () {
+        $(".loginpadge,#back-padge").removeClass("hidden")
+
+    })
+    $("#back-padge,#btnclose").click(function () {
+        $("#back-padge,.loginpadge").addClass("hidden")
+
+    })
+
+</script>
+</body>
